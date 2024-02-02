@@ -1,14 +1,14 @@
 package ru.netology;
 
-public class MovieManager {
-    private int limit;
+public class movieManager {
+    private final int limit;
     private String[] movies = new String[0];
 
-    public MovieManager() {
+    public movieManager() {
         this.limit = 5;
     }
 
-    public MovieManager(int limit) {
+    public movieManager(int limit) {
         this.limit = limit;
     }
 
