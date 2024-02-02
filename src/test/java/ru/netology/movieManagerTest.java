@@ -3,8 +3,8 @@ package ru.netology;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class movieManagerTest {
-    movieManager manager = new movieManager();
+class MovieManagerTest {
+    MovieManager manager = new MovieManager();
 
     String movie1 = "Бладшот";
     String movie2 = "Вперед";
@@ -18,7 +18,7 @@ public class movieManagerTest {
     @Test
     public void valueEmptyTest() {
         String[] expected = {};
-        String[] actual = manager.FindAll();
+        String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -32,7 +32,7 @@ public class movieManagerTest {
         manager.add(movie5);
 
         String[] expected = {movie1, movie2, movie3, movie4, movie5};
-        String[] actual = manager.FindAll();
+        String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
 
@@ -49,7 +49,7 @@ public class movieManagerTest {
         manager.add(movie7);
 
         String[] expected = {movie1, movie2, movie3, movie4, movie5, movie6, movie7};
-        String[] actual = manager.FindAll();
+        String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -64,7 +64,7 @@ public class movieManagerTest {
         manager.add(movie6);
 
         String[] expected = {movie1, movie2, movie3, movie4, movie5, movie6};
-        String[] actual = manager.FindAll();
+        String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -77,7 +77,7 @@ public class movieManagerTest {
         manager.add(movie4);
 
         String[] expected = {movie1, movie2, movie3, movie4};
-        String[] actual = manager.FindAll();
+        String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -89,7 +89,7 @@ public class movieManagerTest {
         manager.add(movie3);
 
         String[] expected = {movie1, movie2, movie3};
-        String[] actual = manager.FindAll();
+        String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -100,7 +100,7 @@ public class movieManagerTest {
         manager.add(movie5);
 
         String[] expected = {movie4, movie5};
-        String[] actual = manager.FindAll();
+        String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -110,7 +110,7 @@ public class movieManagerTest {
         manager.add(movie2);
 
         String[] expected = {movie2};
-        String[] actual = manager.FindAll();
+        String[] actual = manager.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -120,7 +120,7 @@ public class movieManagerTest {
     @Test
     public void findLastTest() {
         String[] expected = {};
-        String[] actual = manager.FindLast();
+        String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -134,7 +134,7 @@ public class movieManagerTest {
         manager.add(movie5);
 
         String[] expected = {movie5, movie4, movie3, movie2, movie1};
-        String[] actual = manager.FindLast();
+        String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -147,7 +147,7 @@ public class movieManagerTest {
         manager.add(movie4);
 
         String[] expected = {movie4, movie3, movie2, movie1};
-        String[] actual = manager.FindLast();
+        String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -159,7 +159,7 @@ public class movieManagerTest {
         manager.add(movie4);
 
         String[] expected = {movie4, movie3, movie2};
-        String[] actual = manager.FindLast();
+        String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -170,7 +170,7 @@ public class movieManagerTest {
         manager.add(movie3);
 
         String[] expected = {movie3, movie2};
-        String[] actual = manager.FindLast();
+        String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -180,7 +180,7 @@ public class movieManagerTest {
         manager.add(movie3);
 
         String[] expected = {movie3};
-        String[] actual = manager.FindLast();
+        String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }

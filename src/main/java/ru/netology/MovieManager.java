@@ -1,14 +1,14 @@
 package ru.netology;
 
-public class movieManager {
+public class MovieManager {
     private final int limit;
     private String[] movies = new String[0];
 
-    public movieManager() {
+    public MovieManager() {
         this.limit = 5;
     }
 
-    public movieManager(int limit) {
+    public MovieManager(int limit) {
         this.limit = limit;
     }
 
@@ -21,11 +21,11 @@ public class movieManager {
         this.movies = tmp;
     }
 
-    public String[] FindAll() {
+    public String[] findAll() {
         return movies;
     }
 
-    public String[] FindLast() {
+    public String[] findLast() {
         int resultLenght;
         if (movies.length < limit) {
             resultLenght = movies.length;
